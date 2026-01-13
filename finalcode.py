@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Dec 16 1109:02:07 2025
-
-@author: kurtk
-"""
 
 def create_kalaha_list(h,s): 
     
@@ -369,10 +365,8 @@ def investigatenextnodes(game_positions_list,player):
                 draw_value_count += 1
                 game_positions_with_values.append(result)
             else:
-                if game_theoretic_value != "p1win" and game_theoretic_value != "p2win":
-                    raise ArithmeticError("URM")
-                else:
-                    game_positions_with_values.append(result)
+                game_positions_with_values.append(result)
+                    
     
     if draw_value_count > 0:
         for game_position_item in game_positions_with_values:
@@ -464,9 +458,6 @@ def update_board(player, chosen_house, kalaha_list):
     pit the last seed was placed in to another function to determine what shall
     be done next with the game.
     """
-    
-    if kalaha_list[chosen_house] == 0:
-        raise ArithmeticError("uoooo")
         
     l = len(kalaha_list)
     
@@ -638,9 +629,6 @@ def startsolving():
         return("Player 1 must pick seeds from house "+chi+" in order to draw.")
     if game_theoretic_value[0] == "p2win":
         return("Under perfect play, Player 1 cannot win.")
-    else:
-        print(game_theoretic_value)
-        raise ArithmeticError("WHAAT")
         
         
         
