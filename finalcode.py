@@ -628,7 +628,7 @@ def startsolving():
         print("Player 1 can at the most force a draw.")
         return("Player 1 must pick seeds from house "+chi+" in order to draw.")
     if game_theoretic_value[0] == "p2win":
-        return("Under perfect play, Player 1 cannot win.")
+        return("Under perfect play, Player 1 cannot win or draw.")
         
         
         
